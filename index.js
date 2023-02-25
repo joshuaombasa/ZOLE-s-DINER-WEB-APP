@@ -1,6 +1,6 @@
 import { menuArray } from './data.js'
 
-
+let orderHtml = ''
 const mainContainer = document.getElementById("main-container")
 
 
@@ -20,7 +20,7 @@ function render() {
                     <h4 class="food-price">$${menu.price}</h4>
                 </div>
                 <div class="shop-item-btn-container">
-                    <span class="shop-food-item-btn" id="${menu.id}" >+</span>
+                    <button class="shop-food-item-btn" id="${menu.id}" >+</button>
                 </div>
             </div>
         </section>`
@@ -33,7 +33,7 @@ render()
 
 document.addEventListener("click", (e) => {
     if (e.target.id === '0') {
-        console.log('get pizza')
+        addItemToCart(e.target.id)
     } else if (e.target.id === '1') {
         console.log('get humberger')
     } else if (e.target.id === '2') {
@@ -43,6 +43,19 @@ document.addEventListener("click", (e) => {
     }
 })
 
-function addItemToCart() {
+function addItemToCart(objId) {
+    document.getElementById("your-order-section").style.display = 'block'
+    let productObject = menuArray.filter(function(menu) {
+        return menu.id === Number(objId)
+    })[0]
+
+    console.log(productObject)
     
+    orderHtml += 
+`
+    <h3 class="order-item" id="order-item">${productObject.name}</h3>
+    <p class="remove-item-link" id="remove-item-link">Remove</p>
+    <h3 class="order-price" id="order-price">$${productObject.price}</h3>
+`
+document.getElementById("order-data").innerHTML = orderHtml
 }
