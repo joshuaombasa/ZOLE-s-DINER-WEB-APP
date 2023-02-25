@@ -197,6 +197,7 @@ header h3 {
 }
 
 .thank-you-container {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
