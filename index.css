@@ -71,10 +71,74 @@ header h3 {
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    cursor: pointer;
+}
+
+.shop-item-btn-container:hover {
+    background-color: greenyellow;
+    color: #fff;
 }
 
 .shop-food-item-btn {
     margin: auto;
     font-weight: bold;
     font-size: 30px;
+}
+
+.your-order-section {
+    /* border: 1px solid black; */
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.your-order-section h3, .total-price-data h3 {
+    margin-top: 0;
+}
+
+.your-order-section p {
+    margin-top: 4px;
+}
+
+.order-section-header {
+    margin-top: 0;
+    text-align: center;
+}
+
+.order-data {
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 15px;
+    margin-bottom: 2px solid #393333;
+}
+
+.order-price {
+    margin: 0 0 auto auto;
+}
+
+.remove-item-link {
+    color: #BBBBBB;
+    font-size: 12px;
+}
+
+.total-price-data {
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.order-price-sum {
+    margin: 0 0 auto auto;
+}
+
+.complete-order-btn {
+    background-color: #16DB99;
+    color: #fff;
+    width: 600px;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    border: none;
 }
