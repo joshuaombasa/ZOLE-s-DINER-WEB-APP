@@ -133,5 +133,5 @@ completeOrderBtn.addEventListener("click", () => {
 })
 
 paymentForm.addEventListener("submit", () => {
-    
+    document.getElementById("thank-you-container").style.display = 'block'
 })
