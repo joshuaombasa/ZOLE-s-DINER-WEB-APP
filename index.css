@@ -143,3 +143,45 @@ header h3 {
     border-radius: 5px;
     border: none;
 }
+
+.payment-container {
+    border: 1px solid black;
+    width: 700px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-inputs {
+    padding: 15px;
+    width: 600px;
+    border: 2px solid #757575;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #757575;
+}
+
+.pay-btn {
+    background-color: #16DB99;
+    color: #fff;
+    width: 630px;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.payment-header {
+    font-size: 30px;
+    background-color: #fff;
+}
