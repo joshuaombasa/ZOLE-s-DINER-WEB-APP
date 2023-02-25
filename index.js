@@ -17,10 +17,10 @@ function render() {
                 <div class="food-details">
                     <h3 class="food-name">${menu.name}</h3>
                     <p class="food-ingredients">${menu.ingredients}</p>
-                    <h4 class="food-price">${menu.price}</h4>
+                    <h4 class="food-price">$${menu.price}</h4>
                 </div>
                 <div class="shop-item-btn-container">
-                    <span class="shop-food-item-btn">+</span>
+                    <span class="shop-food-item-btn" id="${menu.id}" >+</span>
                 </div>
             </div>
         </section>`
@@ -30,3 +30,19 @@ function render() {
 }
 
 render()
+
+document.addEventListener("click", (e) => {
+    if (e.target.id === '0') {
+        console.log('get pizza')
+    } else if (e.target.id === '1') {
+        console.log('get humberger')
+    } else if (e.target.id === '2') {
+        console.log('get beer')
+    } else if (e.target.id === '3') {
+        console.log('get Java Latte')
+    }
+})
+
+function addItemToCart() {
+    
+}
