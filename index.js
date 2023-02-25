@@ -1,8 +1,10 @@
 import { menuArray } from './data.js'
 
 let orderHtml = ''
+let totalPrice = 0
 const mainContainer = document.getElementById("main-container")
 const orderDataContainer = document.getElementById("order-data-container")
+const totalOrderPrice = document.getElementById("order-price-sum")
 
 
 
@@ -28,6 +30,7 @@ function render() {
    
     })
     mainContainer.innerHTML = foodItemHtml
+   
 }
 
 render()
@@ -50,7 +53,6 @@ function addPizzaToCart(objId) {
         return menu.id === Number(objId)
     })[0]
 
-    console.log(productObject)
     
     orderHtml += 
 `
@@ -61,6 +63,8 @@ function addPizzaToCart(objId) {
 </div>
 `
 orderDataContainer.innerHTML = orderHtml
+totalPrice += productObject.price
+totalOrderPrice.textContent = `$${totalPrice}`
 }
 
 function addHumbergerToCart(objId) {
@@ -78,6 +82,8 @@ function addHumbergerToCart(objId) {
 </div>
 `
 orderDataContainer.innerHTML = orderHtml
+totalPrice += productObject.price
+totalOrderPrice.textContent = `$${totalPrice}`
 }
 
 function addBeerToCart(objId) {
@@ -95,6 +101,8 @@ function addBeerToCart(objId) {
 </div>
 `
 orderDataContainer.innerHTML = orderHtml
+totalPrice += productObject.price
+totalOrderPrice.textContent = `$${totalPrice}`
 }
 
 function addJavaLatteToCart(objId) {
@@ -112,5 +120,7 @@ function addJavaLatteToCart(objId) {
 </div>
 `
 orderDataContainer.innerHTML = orderHtml
+totalPrice += productObject.price
+totalOrderPrice.textContent = `$${totalPrice}`
 }
 
