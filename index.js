@@ -5,6 +5,7 @@ let totalPrice = 0
 const mainContainer = document.getElementById("main-container")
 const orderDataContainer = document.getElementById("order-data-container")
 const totalOrderPrice = document.getElementById("order-price-sum")
+const paymentForm = document.getElementById("payment-form")
 
 
 
@@ -124,3 +125,13 @@ totalPrice += productObject.price
 totalOrderPrice.textContent = `$${totalPrice}`
 }
 
+const completeOrderBtn = document.getElementById("complete-order-btn")
+
+completeOrderBtn.addEventListener("click", () => {
+    document.getElementById("payment-container").style.display = 'block'
+    document.getElementById("your-order-section").style.display = 'none'
+})
+
+paymentForm.addEventListener("submit", () => {
+    
+})
