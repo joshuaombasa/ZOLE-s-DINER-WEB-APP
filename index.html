@@ -25,14 +25,17 @@
         </div>
         <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
     </div>
-    <div class="payment-container">
+    <div class="payment-container" id="payment-container">
         <h3 class="payment-header">Enter card details</h3>
         <form action="" class="payment-form" id="payment-form">
-            <input type="text" class="form-inputs" placeholder="Enter your name">
-            <input type="text" class="form-inputs" placeholder="Enter card number">
-            <input type="text" class="form-inputs" placeholder="Enter CVV">
+            <input type="text" class="form-inputs" placeholder="Enter your name" required>
+            <input type="text" class="form-inputs" placeholder="Enter card number" required>
+            <input type="password" class="form-inputs" placeholder="Enter CVV" required>
             <button class="form-inputs pay-btn" id="pay-btn">Pay</button>
         </form>
+    </div>
+    <div class="thank-you-container" id="thank-you-container">
+        <h3 class="thanks-message">Thank you! Your order is on it's way!</h3>
     </div>
     <script src="index.js" type="module"></script>
 </body>
