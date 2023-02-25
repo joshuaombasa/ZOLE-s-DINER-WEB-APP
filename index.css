@@ -67,15 +67,11 @@ header h3 {
 .shop-item-btn-container {
     margin: 10px 10px auto auto;
     display: flex;
-    border: 1px solid #D2D2D2;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
+    
 }
 
-.shop-item-btn-container:hover {
-    background-color: greenyellow;
+.shop-food-item-btn:hover {
+    background-color: #16DB99;
     color: #fff;
 }
 
@@ -83,9 +79,14 @@ header h3 {
     margin: auto;
     font-weight: bold;
     font-size: 30px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #D2D2D2;
 }
 
 .your-order-section {
+    display: none;
     /* border: 1px solid black; */
     width: 600px;
     margin: 0 auto;
