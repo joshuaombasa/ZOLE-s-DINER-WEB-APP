@@ -1,0 +1,80 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: auto;
+    width: auto;
+    background-image: url("images/buger.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    
+}
+
+#header-styling {
+    margin-top: 0;
+    box-sizing: border-box;
+    padding: 70px;
+    width: 660px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+   
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h3 {
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    padding: 30px;
+    /* border: 1px solid green; */
+    margin: 0 auto;
+    margin-top: 20px;
+    border-bottom: 2px solid #D2D2D2;
+}
+
+.menu-div {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.food-emoji {
+    /* border: 1px solid black; */
+    font-size: 80px;
+}
+
+.food-name, .food-ingredients, .food-price, .food-emoji  {
+    /* border: 1px solid black; */
+    margin: 0;
+
+}
+
+.food-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shop-item-btn-container {
+    margin: 10px 10px auto auto;
+    display: flex;
+    border: 1px solid #D2D2D2;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.shop-food-item-btn {
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
