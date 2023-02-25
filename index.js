@@ -2,6 +2,7 @@ import { menuArray } from './data.js'
 
 let orderHtml = ''
 const mainContainer = document.getElementById("main-container")
+const orderDataContainer = document.getElementById("order-data-container")
 
 
 
@@ -33,9 +34,9 @@ render()
 
 document.addEventListener("click", (e) => {
     if (e.target.id === '0') {
-        addItemToCart(e.target.id)
+        addPizzaToCart(e.target.id)
     } else if (e.target.id === '1') {
-        console.log('get humberger')
+        addHumbergerToCart(e.target.id)
     } else if (e.target.id === '2') {
         console.log('get beer')
     } else if (e.target.id === '3') {
@@ -43,7 +44,7 @@ document.addEventListener("click", (e) => {
     }
 })
 
-function addItemToCart(objId) {
+function addPizzaToCart(objId) {
     document.getElementById("your-order-section").style.display = 'block'
     let productObject = menuArray.filter(function(menu) {
         return menu.id === Number(objId)
@@ -53,9 +54,28 @@ function addItemToCart(objId) {
     
     orderHtml += 
 `
-    <h3 class="order-item" id="order-item">${productObject.name}</h3>
-    <p class="remove-item-link" id="remove-item-link">Remove</p>
-    <h3 class="order-price" id="order-price">$${productObject.price}</h3>
+<div class="order-data" id="order-data">
+<h3 class="order-item" id="order-item">${productObject.name}</h3>
+<p class="remove-item-link" id="remove-item-link">Remove</p>
+<h3 class="order-price" id="order-price">$${productObject.price}</h3>        
+</div>
 `
-document.getElementById("order-data").innerHTML = orderHtml
+orderDataContainer.innerHTML = orderHtml
+}
+
+function addHumbergerToCart(objId) {
+    document.getElementById("your-order-section").style.display = 'block'
+    let productObject = menuArray.filter(function(menu) {
+        return menu.id === Number(objId)
+    })[0]
+
+    orderHtml += 
+`
+<div class="order-data" id="order-data">
+<h3 class="order-item" id="order-item">${productObject.name}</h3>
+<p class="remove-item-link" id="remove-item-link">Remove</p>
+<h3 class="order-price" id="order-price">$${productObject.price}</h3>        
+</div>
+`
+orderDataContainer.innerHTML = orderHtml
 }
