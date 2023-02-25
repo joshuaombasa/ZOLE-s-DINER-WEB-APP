@@ -38,9 +38,9 @@ document.addEventListener("click", (e) => {
     } else if (e.target.id === '1') {
         addHumbergerToCart(e.target.id)
     } else if (e.target.id === '2') {
-        console.log('get beer')
+        addBeerToCart(e.target.id)
     } else if (e.target.id === '3') {
-        console.log('get Java Latte')
+        addJavaLatteToCart(e.target.id)
     }
 })
 
@@ -79,3 +79,38 @@ function addHumbergerToCart(objId) {
 `
 orderDataContainer.innerHTML = orderHtml
 }
+
+function addBeerToCart(objId) {
+    document.getElementById("your-order-section").style.display = 'block'
+    let productObject = menuArray.filter(function(menu) {
+        return menu.id === Number(objId)
+    })[0]
+
+    orderHtml += 
+`
+<div class="order-data" id="order-data">
+<h3 class="order-item" id="order-item">${productObject.name}</h3>
+<p class="remove-item-link" id="remove-item-link">Remove</p>
+<h3 class="order-price" id="order-price">$${productObject.price}</h3>        
+</div>
+`
+orderDataContainer.innerHTML = orderHtml
+}
+
+function addJavaLatteToCart(objId) {
+    document.getElementById("your-order-section").style.display = 'block'
+    let productObject = menuArray.filter(function(menu) {
+        return menu.id === Number(objId)
+    })[0]
+
+    orderHtml += 
+`
+<div class="order-data" id="order-data">
+<h3 class="order-item" id="order-item">${productObject.name}</h3>
+<p class="remove-item-link" id="remove-item-link">Remove</p>
+<h3 class="order-price" id="order-price">$${productObject.price}</h3>        
+</div>
+`
+orderDataContainer.innerHTML = orderHtml
+}
+
