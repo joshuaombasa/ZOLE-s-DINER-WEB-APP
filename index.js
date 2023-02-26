@@ -136,7 +136,10 @@ paymentForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let formData = new FormData(document.querySelector('form'))
     let clientName= formData.get('clientName')
-    console.log(clientName)
+    
+    document.getElementById("thank-you-container").innerHTML = 
+    `<h3 class="thanks-message">Thank you ${clientName}! Your order is on it's way!</h3>
+    `
     
     document.getElementById("thank-you-container").style.display = 'block'
     document.getElementById("payment-container").style.display = 'none'
