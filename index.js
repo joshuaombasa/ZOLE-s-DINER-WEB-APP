@@ -132,6 +132,9 @@ completeOrderBtn.addEventListener("click", () => {
     document.getElementById("your-order-section").style.display = 'none'
 })
 
-paymentForm.addEventListener("submit", () => {
+paymentForm.addEventListener("submit", (e) => {
+    e.preventDefault()
     document.getElementById("thank-you-container").style.display = 'block'
+    document.getElementById("payment-container").style.display = 'none'
+    
 })
