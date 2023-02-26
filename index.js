@@ -63,7 +63,9 @@ function addPizzaToCart(objId) {
 <h3 class="order-price" id="order-price">$${productObject.price}</h3>        
 </div>
 `
-orderMathFunction()
+orderDataContainer.innerHTML = orderHtml
+totalPrice += productObject.price
+totalOrderPrice.textContent = `$${totalPrice}`
 }
 
 function addHumbergerToCart(objId) {
@@ -143,9 +145,3 @@ paymentForm.addEventListener("submit", (e) => {
     document.getElementById("payment-container").style.display = 'none'
     
 })
-
-function orderMathFunction() {
-    orderDataContainer.innerHTML = orderHtml
-    totalPrice += productObject.price
-   totalOrderPrice.textContent = `$${totalPrice}`
-}
